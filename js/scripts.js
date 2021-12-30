@@ -92,3 +92,4 @@ if(!'') // true
 if(!undefined); //true
 
 true && true; // AND Operator
+true || false; // OR Operator
