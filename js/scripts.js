@@ -98,5 +98,28 @@ true || false; // OR Operator
 function areaQuadrado(lado){
     return lado * lado
 }
-
+function carroFavorito(carro){
+    if(carro === 'Fusca'){
+        console.log("O carro favorito e o fusca.")
+    }
+    else if(carro === 'Gol'){
+        console.log("O carro e um gol.")
+    }
+    else{
+        console.log("Nenhum dos carros.")
+    }
+}
 areaQuadrado(10) // call the function
+console.log(areaQuadrado(10)); // print function
+console.log(carroFavorito())
+
+// Object
+
+var carro = {
+    nome: 'Lamborghini', 
+    ano: 2021,
+    cor: 'Branca',
+    automatica: true
+}
+carro.nome; // 'Lamborghini'
+carro.cor; // 'Branca'  
