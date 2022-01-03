@@ -123,3 +123,7 @@ var carro = {
 }
 carro.nome; // 'Lamborghini'
 carro.cor; // 'Branca'  
+
+// Arrays
+var filhos = ['Rui', 'Maria', 'Pamela', 'Yuri']; // create array
+console.log(filhos) // print array
