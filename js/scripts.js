@@ -147,5 +147,12 @@ while(i < 10){
 // Loops com Array
 var testing = ['Fusca', 'Ferrari', 'Gol'];
 for(var i = 0; i < testing.length; i++){
-    console.log(testing[i])
+   // console.log(testing[i]);
 }
+
+// forEach
+testing.forEach( // just use item, index or array 
+    function(item) {
+        console.log(item);
+    })
+ 
