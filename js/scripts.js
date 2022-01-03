@@ -126,4 +126,15 @@ carro.cor; // 'Branca'
 
 // Arrays
 var filhos = ['Rui', 'Maria', 'Pamela', 'Yuri']; // create array
-console.log(filhos) // print array
+console.log(filhos); // print array
+
+filhos.pop(); // Remove last item of array
+filhos.push('Cruze'); // Add in the end of array
+filhos.length(); // 4
+
+// For loop
+for(var numero = 0; numero < 10; numero++){
+    console.log(numero);
+}
+
+// retorna de 0 a 9 no console
