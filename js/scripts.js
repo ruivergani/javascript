@@ -93,3 +93,10 @@ if(!undefined); //true
 
 true && true; // AND Operator
 true || false; // OR Operator
+
+// Functions
+function areaQuadrado(lado){
+    return lado * lado
+}
+
+areaQuadrado(10) // call the function
