@@ -168,12 +168,21 @@ const titulo02 = document.querySelector('h2'); // atribui a uma constante a sele
 console.log(titulo02.classList[0])
 document.body; // retorna o body
 
-// Selecionando elementos
+// Selecionando elements
 const cabecalho = document.getElementById('js-cabecalho'); // getElementByID
 
+// QuerySelector
 const rodape = document.querySelector('.rodape'); // seleciona o primeiro elemento com a classe rodape
-const menu = document.querySelector('#menu');
-const ultimoItem = document.querySelector('ul li:last-child');
-const primeiraLista = document.querySelector('ul');
+const menu = document.querySelector('#menu'); // using ID
+const ultimoItem = document.querySelector('ul li:last-child'); // choosing same as CSS
+const primeiraLista = document.querySelector('ul'); // first list
+const itemMenu = primeiraLista.querySelector('li'); // selecting from primeiraLista (li)
 
-const itemMenu = primeiraLista.querySelector('li')
+// QuerySelectorAll
+const allDropdowns= document.querySelectorAll('.dropdown'); // return as an array (list)
+console.log(listDropdown[1]); // retorna o segundo elemento com a classe dropdown
+allDropdowns.forEach(function(item, index){ // go through an array (item, index)
+    console.log(item, index);
+})
+
+// forEach and Arrow Function
