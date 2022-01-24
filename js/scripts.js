@@ -161,3 +161,19 @@ testing.forEach( // just use item, index or array
 // DOM
 console.log(window); // window e o objeto global do navegador que possui diferentes metodos e propriedades 
 console.log(window.innerWidth); // retorna a largura do navegador
+window.alert('Isto e um alerta.');
+alert('outro alerta');
+document.querySelector('h2'); // seleciona o 1 H2
+const titulo02 = document.querySelector('h2'); // atribui a uma constante a selecao h2
+console.log(titulo02.classList[0])
+document.body; // retorna o body
+
+// Selecionando elementos
+const cabecalho = document.getElementById('js-cabecalho'); // getElementByID
+
+const rodape = document.querySelector('.rodape'); // seleciona o primeiro elemento com a classe rodape
+const menu = document.querySelector('#menu');
+const ultimoItem = document.querySelector('ul li:last-child');
+const primeiraLista = document.querySelector('ul');
+
+const itemMenu = primeiraLista.querySelector('li')
