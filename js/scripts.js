@@ -155,4 +155,9 @@ testing.forEach( // just use item, index or array
     function(item) {
         console.log(item);
     })
+// By using forEach you don't need to use condition, or start or increment.
  
+
+// DOM
+console.log(window); // window e o objeto global do navegador que possui diferentes metodos e propriedades 
+console.log(window.innerWidth); // retorna a largura do navegador
