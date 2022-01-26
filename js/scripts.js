@@ -6,7 +6,6 @@ console.log('Hello World!!'); // escreve no console do navegador
 var marcaCarro = 'Chevrolet';
 let anoCarro = 2021;
 const vendido = false; // nao altera a variavel
-
 console.log(marcaCarro);
 console.log(anoCarro);
 
@@ -61,7 +60,6 @@ console.log(incrementar++) // after
 console.log(++incrementar) // before
 
 
-
 // Conditional IF and Else
 if(carroVendido){
     console.log('O carro foi vendido! ');
@@ -83,7 +81,6 @@ else{
 }
 
 
-
 // False values
 if(false);
 if(0);
@@ -93,7 +90,6 @@ if(undefined);
 if('');
 
 
-
 // Negative Operator
 if(!true) // false
 if(!'') // true
@@ -101,7 +97,6 @@ if(!undefined); //true
 
 true && true; // AND Operator
 true || false; // OR Operator
-
 
 
 // Functions
@@ -146,12 +141,10 @@ filhos.push('Cruze'); // Add in the end of array
 filhos.length; // 4
 
 
-
 // For loop
 for(var numero = 0; numero <= 10; numero++){
     console.log(numero);
 }
-
 
 
 // While
@@ -162,13 +155,11 @@ while(i < 10){
 }
 
 
-
 // Loops com Array
 var testing = ['Fusca', 'Ferrari', 'Gol'];
 for(var i = 0; i < testing.length; i++){
    // console.log(testing[i]);
 }
-
 
 
 // forEach
@@ -179,8 +170,6 @@ testing.forEach( // just use item, index or array
 // By using forEach you don't need to use condition, or start or increment.
  
 
-
-
 // DOM
 console.log(window); // window e o objeto global do navegador que possui diferentes metodos e propriedades 
 console.log(window.innerWidth); // retorna a largura do navegador
@@ -190,6 +179,7 @@ document.querySelector('h2'); // seleciona o 1 H2
 const titulo02 = document.querySelector('h2'); // atribui a uma constante a selecao h2
 console.log(titulo02.classList[0])
 document.body; // retorna o body
+
 
 // Selecionando elements
 const cabecalho = document.getElementById('js-cabecalho'); // getElementByID
@@ -221,7 +211,6 @@ alldropdown.forEach(function(item, index, array){
         console.log('Estou clicando no item' + index)
     })
 })
-
 
 
 // Arrow Function
@@ -299,3 +288,11 @@ function eventoDeClicar2(event){ // previne o comportamento padrao do evento no 
     event.preventDefault(); // prevenir o comportamento padrao do elemento
     console.log(event.currentTarget.href);
 }
+function callBack(event){
+    console.log(event.type);
+}
+// Types of events
+button.addEventListener('click', callBack);
+button.addEventListener('mouseenter', callBack);
+button.addEventListener('mouseleave', callBack);
+button.addEventListener('keydown', callBack);
