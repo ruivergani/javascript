@@ -10,8 +10,8 @@ const vendido = false; // nao altera a variavel
 console.log(marcaCarro);
 console.log(anoCarro);
 
-// Data Structure
 
+// Data Structure
 var carro = 'Gol'; // String
 var anoCarro2 = 2021; // Number
 var carroVendido = true; // Boolean
@@ -44,6 +44,7 @@ console.log(typeof carro); // Type of Variable
 console.log("O carro com nome " + carro + " foi fabricado no ano de " + anoCarro2); // Concatenacao
 console.log(`O nome do carro e ${carro}`); // Template String (ECMA Script 6)
 
+
 // Numbers and Operators
 let pi = 3.14
 let soma = 5 + 10;
@@ -53,10 +54,13 @@ let divisao = 10 / 2;
 let expoente = 2 ** 4;
 let medida = 'litros'; // NaN (not a number - if you sum number + string)
 
+
 // Unario Operator
 let incrementar = 10;
 console.log(incrementar++) // after
 console.log(++incrementar) // before
+
+
 
 // Conditional IF and Else
 if(carroVendido){
@@ -78,6 +82,8 @@ else{
     console.log('Ele nao tem nenhum veiculo.');
 }
 
+
+
 // False values
 if(false);
 if(0);
@@ -86,6 +92,8 @@ if(null);
 if(undefined);
 if('');
 
+
+
 // Negative Operator
 if(!true) // false
 if(!'') // true
@@ -93,6 +101,8 @@ if(!undefined); //true
 
 true && true; // AND Operator
 true || false; // OR Operator
+
+
 
 // Functions
 function areaQuadrado(lado){
@@ -113,8 +123,9 @@ areaQuadrado(10) // call the function
 console.log(areaQuadrado(10)); // print function
 console.log(carroFavorito())
 
-// Object
 
+
+// Object
 var carro = {
     nome: 'Lamborghini', 
     ano: 2021,
@@ -124,6 +135,8 @@ var carro = {
 carro.nome; // 'Lamborghini'
 carro.cor; // 'Branca'  
 
+
+
 // Arrays
 var filhos = ['Rui', 'Maria', 'Pamela', 'Yuri']; // create array
 console.log(filhos); // print array
@@ -132,10 +145,14 @@ filhos.pop(); // Remove last item of array
 filhos.push('Cruze'); // Add in the end of array
 filhos.length; // 4
 
+
+
 // For loop
 for(var numero = 0; numero <= 10; numero++){
     console.log(numero);
 }
+
+
 
 // While
 var i = 0;
@@ -144,11 +161,15 @@ while(i < 10){
     i++;
 }
 
+
+
 // Loops com Array
 var testing = ['Fusca', 'Ferrari', 'Gol'];
 for(var i = 0; i < testing.length; i++){
    // console.log(testing[i]);
 }
+
+
 
 // forEach
 testing.forEach( // just use item, index or array 
@@ -157,6 +178,8 @@ testing.forEach( // just use item, index or array
     })
 // By using forEach you don't need to use condition, or start or increment.
  
+
+
 
 // DOM
 console.log(window); // window e o objeto global do navegador que possui diferentes metodos e propriedades 
@@ -199,8 +222,9 @@ alldropdown.forEach(function(item, index, array){
     })
 })
 
-// Arrow Function
 
+
+// Arrow Function
 const allDropdowns = document.querySelectorAll('.dropdown');
 allDropdowns.forEach((item, index, array) => { // do not need the function structure (arguments go directly using =>)
     console.log('Index:' ,index)
@@ -243,4 +267,15 @@ button.addEventListener('click', () => { // no clique a funcao vai ser executada
     else{
         input.setAttribute('type', 'password')
     }
+})
+
+
+
+// Events
+
+// addEventListener = adiciona uma funcao a um elemento. Sera ativada no elemento definido.
+const buttons = document.querySelector('button');
+
+buttons.addEventListener('click', () => {
+    console.log('clicou no botao')
 })
