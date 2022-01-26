@@ -161,8 +161,8 @@ testing.forEach( // just use item, index or array
 // DOM
 console.log(window); // window e o objeto global do navegador que possui diferentes metodos e propriedades 
 console.log(window.innerWidth); // retorna a largura do navegador
-window.alert('Isto e um alerta.');
-alert('outro alerta');
+// window.alert('Isto e um alerta.');
+// alert('outro alerta');
 document.querySelector('h2'); // seleciona o 1 H2
 const titulo02 = document.querySelector('h2'); // atribui a uma constante a selecao h2
 console.log(titulo02.classList[0])
@@ -171,7 +171,7 @@ document.body; // retorna o body
 // Selecionando elements
 const cabecalho = document.getElementById('js-cabecalho'); // getElementByID
 
-// QuerySelector
+//QuerySelector
 const rodape = document.querySelector('.rodape'); // seleciona o primeiro elemento com a classe rodape
 const menu = document.querySelector('#menu'); // using ID
 const ultimoItem = document.querySelector('ul li:last-child'); // choosing same as CSS
@@ -179,10 +179,22 @@ const primeiraLista = document.querySelector('ul'); // first list
 const itemMenu = primeiraLista.querySelector('li'); // selecting from primeiraLista (li)
 
 // QuerySelectorAll
-const allDropdowns= document.querySelectorAll('.dropdown'); // return as an array (list)
-console.log(listDropdown[1]); // retorna o segundo elemento com a classe dropdown
-allDropdowns.forEach(function(item, index){ // go through an array (item, index)
-    console.log(item, index);
+const alldropdowns = document.querySelectorAll('.dropdown'); // return as an array (list)
+console.log(alldropdowns[1]); // retorna o segundo elemento com a classe dropdown
+alldropdowns.forEach(function(item, index){ // go through an array (item, index)
+  console.log(item, index);
 })
 
 // forEach and Arrow Function
+const alldropdown = document.querySelectorAll('.dropdown');
+alldropdown.forEach(function(item, index, array){ // forEach
+    console.log(item); // Item atual do loop
+    console.log(index); // O numero do index
+    console.log(array); // Array completo
+})
+
+alldropdown.forEach(function(item, index, array){
+    item.addEventListener('click', function(){ // evento que mapeia o click (nesse caso posso mudar a cor apos o clique em cada botao)
+        console.log('Estou clicando no item' + index)
+    })
+})
