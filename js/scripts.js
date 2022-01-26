@@ -224,3 +224,9 @@ console.log(titulo.classList.contains('ativo')); // true ou false (if condition 
 titulo.classList.replace('ativo', 'inativo'); // troca uma classe pela outra
 
 console.log(titulo)
+
+// getAttribute 
+const image = document.querySelector('img');
+console.log(image.getAttribute('src')) // pegar atributo src da imagem 
+
+// setAttribute
