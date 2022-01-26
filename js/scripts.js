@@ -285,3 +285,12 @@ function eventoDeClicar(){
     console.log('Clicou no botao')
 }
 botao.addEventListener('click', eventoDeClicar); // calling the function here
+
+// event
+function eventoDeClicar1(event){ // event: retorna todos atributos e metodos do evento que aconteceu (click) no caso acima
+    //Elemento que foi clicado
+    console.log(event.currentTarget); // qual elemento esta clicando
+    console.log(event.target); // aonde foi clicado
+    console.log(event.type); // tipo do evento
+    console.log(event.path); // caminho do elemento
+}
