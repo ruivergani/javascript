@@ -185,7 +185,7 @@ alldropdowns.forEach(function(item, index){ // go through an array (item, index)
   console.log(item, index);
 })
 
-// forEach and Arrow Function
+// forEach
 const alldropdown = document.querySelectorAll('.dropdown');
 alldropdown.forEach(function(item, index, array){ // forEach
     console.log(item); // Item atual do loop
@@ -197,4 +197,16 @@ alldropdown.forEach(function(item, index, array){
     item.addEventListener('click', function(){ // evento que mapeia o click (nesse caso posso mudar a cor apos o clique em cada botao)
         console.log('Estou clicando no item' + index)
     })
+})
+
+// Arrow Function
+
+const allDropdowns = document.querySelectorAll('.dropdown');
+allDropdowns.forEach((item, index, array) => { // do not need the function structure (arguments go directly using =>)
+    console.log('Index:' ,index)
+    console.log('Item:' ,item)
+    console.log('Array:' ,array)
+})
+allDropdowns.forEach(() => {
+    // this is the structure for arrow function
 })
