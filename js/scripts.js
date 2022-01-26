@@ -227,6 +227,7 @@ console.log(titulo)
 
 // getAttribute 
 const image = document.querySelector('img');
-console.log(image.getAttribute('src')) // pegar atributo src da imagem 
+console.log(image.getAttribute('src')); // pegar atributo src da imagem 
 
 // setAttribute
+console.log(image.setAttribute('src', '/caminho-da-imagem')); // colocar um atributo na imagem
