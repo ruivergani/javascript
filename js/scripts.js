@@ -294,3 +294,8 @@ function eventoDeClicar1(event){ // event: retorna todos atributos e metodos do 
     console.log(event.type); // tipo do evento
     console.log(event.path); // caminho do elemento
 }
+// event.preventDefault()
+function eventoDeClicar2(event){ // previne o comportamento padrao do evento no browser (por exemplo: se voce for fazer link de ancora para uma secao no site (tem que usar tag link) porem a pagina ira atualizar, e nao executara o javascript - prevenir de nao atualizar a pagina)
+    event.preventDefault(); // prevenir o comportamento padrao do elemento
+    console.log(event.currentTarget.href);
+}
