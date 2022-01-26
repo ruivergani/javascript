@@ -274,8 +274,14 @@ button.addEventListener('click', () => { // no clique a funcao vai ser executada
 // Events
 
 // addEventListener = adiciona uma funcao a um elemento. Sera ativada no elemento definido.
-const buttons = document.querySelector('button');
+const botao = document.querySelector('button');
 
-buttons.addEventListener('click', () => {
+botao.addEventListener('click', () => {
     console.log('clicou no botao')
 })
+
+// Boa pratica separar o callback 
+function eventoDeClicar(){
+    console.log('Clicou no botao')
+}
+botao.addEventListener('click', eventoDeClicar); // calling the function here
