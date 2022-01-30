@@ -263,17 +263,26 @@ button.addEventListener('click', () => { // no clique a funcao vai ser executada
 // Events
 
 // addEventListener = adiciona uma funcao a um elemento. Sera ativada no elemento definido.
-const botao = document.querySelector('button');
+const botao = document.querySelectorAll('button');
 
 botao.addEventListener('click', () => {
     console.log('clicou no botao')
+})
+
+// exemplo com forEach
+function clickBotao(event){
+    console.log(event.type);
+    console.log(this); 
+}
+botao.forEach(item => {
+    item.addEventListener('click', clickBotao)
 })
 
 // Boa pratica separar o callback 
 function eventoDeClicar(){
     console.log('Clicou no botao')
 }
-botao.addEventListener('click', eventoDeClicar); // calling the function here
+Button.addEventListener('click', eventoDeClicar); // calling the function here
 
 // event
 function eventoDeClicar1(event){ // event: retorna todos atributos e metodos do evento que aconteceu (click) no caso acima
@@ -292,7 +301,26 @@ function callBack(event){
     console.log(event.type);
 }
 // Types of events
-button.addEventListener('click', callBack);
-button.addEventListener('mouseenter', callBack);
-button.addEventListener('mouseleave', callBack);
-button.addEventListener('keydown', callBack);
+button.addEventListener('click', callBack); // clique
+button.addEventListener('mouseenter', callBack); // enter the section 
+button.addEventListener('mouseleave', callBack); // leave the section
+button.addEventListener('keydown', callBack); // apertar tecla do teclado
+// window.resize 
+
+
+const buttons = document.querySelector('a'); // variable
+function eventoCallback(event){ // Function to return something accordingly to the event
+    event.preventDefault();
+    console.log(event.type);
+}
+botao.addEventListener('mouseenter', eventoCallback) // EVENTO (acao, chamada do callback function)\
+
+
+// Exercise: change color when click on button
+const btn = document.querySelectorAll('button');
+function changeColor(event){
+    this.classList.toggle('ativo');
+}
+btn.forEach(item => {
+    item.addEventListener('click', changeColor); // pegou item e adicionou evento nele
+})
