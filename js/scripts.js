@@ -226,15 +226,15 @@ allDropdowns.forEach(() => {
 
 
 // Class
-const titulo = document.querySelector('h1');
+const titulos = document.querySelector('h1');
 
-titulo.classList; // lista de classes do elemento
-titulo.classList.add('ativo'); // add class
-titulo.classList.remove('ativo'); // remove class
-titulo.classList.toggle('ativo'); // add/remove class de acordo com condition (pode ser click)
-titulo.classList.contains('ativo'); // true ou false
-console.log(titulo.classList.contains('ativo')); // true ou false (if condition to see if exists or not)
-titulo.classList.replace('ativo', 'inativo'); // troca uma classe pela outra
+titulos.classList; // lista de classes do elemento
+titulos.classList.add('ativo'); // add class
+titulos.classList.remove('ativo'); // remove class
+titulos.classList.toggle('ativo'); // add/remove class de acordo com condition (pode ser click)
+titulos.classList.contains('ativo'); // true ou false
+console.log(titulos.classList.contains('ativo')); // true ou false (if condition to see if exists or not)
+titulos.classList.replace('ativo', 'inativo'); // troca uma classe pela outra
 
 console.log(titulo)
 
@@ -324,3 +324,10 @@ function changeColor(event){
 btn.forEach(item => {
     item.addEventListener('click', changeColor); // pegou item e adicionou evento nele
 })
+
+// OuterHTML, InnerHTML and innerText
+const title = document.querySelector('.titulo');
+
+console.log(title.outerHTML); // todo html do elemento
+console.log(title.innerHTML); // html interno
+console.log(title.innerText); // texto, sem tags
