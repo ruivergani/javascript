@@ -1,6 +1,4 @@
 
-
-
 // Events
 
 // addEventListener = adiciona uma funcao a um elemento. Sera ativada no elemento definido.
