@@ -184,6 +184,7 @@ document.body; // retorna o body
 // Selecionando elements
 const cabecalho = document.getElementById('js-cabecalho'); // getElementByID
 
+
 //QuerySelector
 const rodape = document.querySelector('.rodape'); // seleciona o primeiro elemento com a classe rodape
 const menu = document.querySelector('#menu'); // using ID
@@ -191,12 +192,14 @@ const ultimoItem = document.querySelector('ul li:last-child'); // choosing same 
 const primeiraLista = document.querySelector('ul'); // first list
 const itemMenu = primeiraLista.querySelector('li'); // selecting from primeiraLista (li)
 
+
 // QuerySelectorAll
 const alldropdowns = document.querySelectorAll('.dropdown'); // return as an array (list)
 console.log(alldropdowns[1]); // retorna o segundo elemento com a classe dropdown
 alldropdowns.forEach(function(item, index){ // go through an array (item, index)
   console.log(item, index);
 })
+
 
 // forEach
 const alldropdown = document.querySelectorAll('.dropdown');
@@ -259,7 +262,6 @@ button.addEventListener('click', () => { // no clique a funcao vai ser executada
 })
 
 
-
 // OuterHTML, InnerHTML and innerText
 const title = document.querySelector('.titulo');
 
@@ -271,14 +273,7 @@ title.innerText = '<h1>Novo Titulo </h1>'; // A tag  vai como texto
 title.innerHTML = '<h1>New title </h1>';
 
 
-// one line comment
-/* multi-line
-comment 
-*/
-
-
 // Events
-
 // addEventListener = adiciona uma funcao a um elemento. Sera ativada no elemento definido.
 const botao = document.querySelectorAll('button');
 
@@ -286,7 +281,8 @@ botao.addEventListener('click', () => {
     console.log('clicou no botao')
 })
 
-// exemplo com forEach
+
+// Using ForEach
 function clickBotao(event){
     console.log(event.type);
     console.log(this); 
@@ -295,13 +291,15 @@ botao.forEach(item => {
     item.addEventListener('click', clickBotao)
 })
 
-// Boa pratica separar o callback 
+
+// Separating the callback function
 function eventoDeClicar(){
     console.log('Clicou no botao')
 }
 Button.addEventListener('click', eventoDeClicar); // calling the function here
 
-// event
+
+// Event
 function eventoDeClicar1(event){ // event: retorna todos atributos e metodos do evento que aconteceu (click) no caso acima
     //Elemento que foi clicado
     console.log(event.currentTarget); // qual elemento esta clicando
@@ -309,7 +307,9 @@ function eventoDeClicar1(event){ // event: retorna todos atributos e metodos do 
     console.log(event.type); // tipo do evento
     console.log(event.path); // caminho do elemento
 }
-// event.preventDefault()
+
+
+// Prevent.Default() Concept
 function eventoDeClicar2(event){ // previne o comportamento padrao do evento no browser (por exemplo: se voce for fazer link de ancora para uma secao no site (tem que usar tag link) porem a pagina ira atualizar, e nao executara o javascript - prevenir de nao atualizar a pagina)
     event.preventDefault(); // prevenir o comportamento padrao do elemento
     console.log(event.currentTarget.href);
@@ -317,6 +317,8 @@ function eventoDeClicar2(event){ // previne o comportamento padrao do evento no 
 function callBack(event){
     console.log(event.type);
 }
+
+
 // Types of events
 button.addEventListener('click', callBack); // clique
 button.addEventListener('mouseenter', callBack); // enter the section 
@@ -331,6 +333,8 @@ function eventoCallback(event){ // Function to return something accordingly to t
     console.log(event.type);
 }
 botao.addEventListener('mouseenter', eventoCallback) // EVENTO (acao, chamada do callback function)\
+
+
 
 
 // Exercise: change color when click on button
