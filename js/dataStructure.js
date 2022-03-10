@@ -42,3 +42,7 @@ console.log(objetoPosicoes.length);
 console.log(typeof carro); // Type of Variable
 console.log("O carro com nome " + carro + " foi fabricado no ano de " + anoCarro2); // Concatenacao
 console.log(`O nome do carro e ${carro}`); // Template String (ECMA Script 6)
+
+// Convert method for string
+parseInt();
+parseFloat();
