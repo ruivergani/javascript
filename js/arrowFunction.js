@@ -9,3 +9,8 @@ allDropdowns.forEach(() => {
     // this is the structure for arrow function
 })
 
+
+// arrow function
+const x = () =>{
+    // function inside assigned to x
+}
