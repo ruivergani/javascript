@@ -41,4 +41,6 @@ console.log("Can I vote?", vote); // block level
 
 
 // function can be declared anywhere and called BEFORE or AFTER declaration excepet when using functions expressions or arrows
+// HOISTED: means is declared first - function will be always in the begginng when JS is reading
 
+// good practice name functions/callbacks
