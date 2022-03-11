@@ -14,3 +14,5 @@ allDropdowns.forEach(() => {
 const x = () =>{
     // function inside assigned to x
 }
+// check for parameters
+let difference = (a, b) => b ? a - b : "Missing value"; // ternary operator
