@@ -246,7 +246,7 @@ const image = document.querySelector('img');
 console.log(image.getAttribute('src')); // pegar atributo src da imagem 
 
 // setAttribute
-console.log(image.setAttribute('src', '/caminho-da-imagem')); // colocar um atributo na imagem
+//console.log(image.setAttribute('src', '/caminho-da-imagem')); // colocar um atributo na imagem
 
 // Change password to view/not
 const button = document.querySelector('button')
@@ -296,7 +296,7 @@ botao.forEach(item => {
 function eventoDeClicar(){
     console.log('Clicou no botao')
 }
-Button.addEventListener('click', eventoDeClicar); // calling the function here
+botao.addEventListener('click', eventoDeClicar); // calling the function here
 
 
 // Event
@@ -332,9 +332,7 @@ function eventoCallback(event){ // Function to return something accordingly to t
     event.preventDefault();
     console.log(event.type);
 }
-botao.addEventListener('mouseenter', eventoCallback) // EVENTO (acao, chamada do callback function)\
-
-
+buttons.addEventListener('mouseenter', eventoCallback) // EVENTO (acao, chamada do callback function)\
 
 
 // Exercise: change color when click on button
@@ -346,7 +344,16 @@ btn.forEach(item => {
     item.addEventListener('click', changeColor); // pegou item e adicionou evento nele
 })
 
-
 // Convert method for string
 parseInt();
 parseFloat();
+
+
+// Transversing in JS 
+const titulo = document.querySelector('.titulo');
+titulo.parentElement; // pai deste elemento
+titulo.parentElement.parentElement; // pai do pai 
+titulo.previousElementSibling; // elemento anterior
+titulo.nextElementSibling; // proximo elemento
+
+// 
