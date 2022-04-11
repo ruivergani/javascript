@@ -350,10 +350,26 @@ parseFloat();
 
 
 // Transversing in JS 
-const titulo = document.querySelector('.titulo');
+const titulo = document.querySelect('.titulo');
 titulo.parentElement; // pai deste elemento
 titulo.parentElement.parentElement; // pai do pai 
 titulo.previousElementSibling; // elemento anterior
 titulo.nextElementSibling; // proximo elemento
 
-// 
+// Manipulando elementos
+const item01 = document.querySelector('.item-01');
+const txtTitulo = document.querySelect('.titulo');
+
+// move o elemento para o final do item 01
+item01.appendChild(item02);
+
+// remove o titulo do item01
+item01.removeChild(txtTitulo);
+
+// Criando a estrutura dos elementos em JS
+const areaDeTitulos = document.querySelector('.area-titulos');
+const novoTitulo = document.createElement('h1');
+
+novoTitulo.innerText = 'Novo Titulo'; // inserir inner text
+novoTitulo.classList.add('titulo-novo'); // adiciona a class titulo novo
+areaDeTitulos.appendChild(novoTitulo); // coloca esse elemento na div area-titulos
