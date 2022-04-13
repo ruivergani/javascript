@@ -373,3 +373,17 @@ const novoTitulo = document.createElement('h1');
 novoTitulo.innerText = 'Novo Titulo'; // inserir inner text
 novoTitulo.classList.add('titulo-novo'); // adiciona a class titulo novo
 areaDeTitulos.appendChild(novoTitulo); // coloca esse elemento na div area-titulos
+
+// setTimeout and setInterval
+
+//atrasar alguma coisa no JS (delay)
+setTimeout(() => {
+    console.log('Executar setTimeout');
+}, 3000) // 3000 = in mileseconds
+
+// executar a funcao em um intervalo de tempo 
+setInterval(() => {
+
+}, 1000) // mil mileseconds
+
+// Number(string) = convert string to number
