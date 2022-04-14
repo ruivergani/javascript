@@ -387,3 +387,8 @@ setInterval(() => {
 }, 1000) // mil mileseconds
 
 // Number(string) = convert string to number
+
+// Local Storage
+localStorage.setItem('Categoria', 'Caminhoes');
+
+console.log(localStorage.getItem('Categoria'));
