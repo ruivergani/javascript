@@ -390,5 +390,9 @@ setInterval(() => {
 
 // Local Storage
 localStorage.setItem('Categoria', 'Caminhoes');
-
 console.log(localStorage.getItem('Categoria'));
+// mantem apos navegador fechado
+
+//Session Storage
+sessionStorage.setItem('Categoria', 'Motos');
+// a informacao se perde com a fecha do navegador
