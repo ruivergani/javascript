@@ -2,13 +2,13 @@ console.log('Hello World!!'); // escreve no console do navegador
 // alert('Isto e um alert do javascript'); // manda um alerta para o navegador
 
 
-// Variables in JS
-var marcaCarro = 'Chevrolet';
-let anoCarro = 2021;
-const vendido = false; // nao altera a variavel
-console.log(marcaCarro);
+// Variables in JS (descriptive names)
+var marcaCarro = 'Chevrolet'; // global variable
+let anoCarro = 2021; // better to use let does not change
+const vendido = false; // do not change variable
+console.log(typeof marcaCarro); // check data type
 console.log(anoCarro);
-
+// const and let are local only work in the scope created
 
 // Data Structure
 var carro = 'Gol'; // String
@@ -17,13 +17,14 @@ var carroVendido = true; // Boolean
 var qtdRodas; // Undefined
 var carroAutomatico; // Null
 var Simbolo = Symbol(); // Symbol
+// Object contain - array, set, map, date
 var ObjetoCarro = { // Object
     nome: 'Gol',
     anoFabricacao: 2021,
     marca: 'Volswagen'
 }; 
 console.log(ObjetoCarro);
-console.log(ObjetoCarro.nome);
+console.log(ObjetoCarro.nome); // get the value from object
 var objetoPosicoes = [ // Object (more positions)
     { 
         nome: 'Gol',
@@ -36,12 +37,21 @@ var objetoPosicoes = [ // Object (more positions)
         marca: 'Volswagen'
     },
 ];
+// Array
+const animals = [
+    'Lion', 
+    'Cat',
+    'Monkey'
+];
+console.log(animals[0]); // get value from array
+// you can also use array [1,2,3];
 console.log(objetoPosicoes[0].nome);
 console.log(objetoPosicoes.length);
 
 console.log(typeof carro); // Type of Variable
 console.log("O carro com nome " + carro + " foi fabricado no ano de " + anoCarro2); // Concatenacao
 console.log(`O nome do carro e ${carro}`); // Template String (ECMA Script 6)
+
 
 
 // Numbers and Operators
@@ -118,6 +128,20 @@ areaQuadrado(10) // call the function
 console.log(areaQuadrado(10)); // print function
 console.log(carroFavorito())
 
+// function expression 
+sum = function(num1, num2){
+    let total = num1 + num2 // always use let
+    return total
+}
+console.log(`The sum is ${sum(3, 4)}.`);
+
+// function hoisting = means that all functions are going up in the beginning of execution
+
+// Arrow Function 
+const sayMyName = () => {
+    console.log('Rui')
+}
+sayMyName(); // call function
 
 
 // Object
