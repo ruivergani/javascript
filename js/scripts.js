@@ -158,9 +158,13 @@ sayMyName(
 // Function Constructor
 function Person(name) {
     this.name = name // keyword to reference the object
+    this.walk = function (){
+        console.log('Andando');
+    }
 }
 const rui = new Person("Neto") // initialize constructor (objeto)
 const joao = new Person("Joao")
+console.log(joao.walk()) // call function from constructor
 
 
 // Object
