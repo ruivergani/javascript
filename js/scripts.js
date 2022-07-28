@@ -156,7 +156,11 @@ sayMyName(
 )
 
 // Function Constructor
-
+function Person(name) {
+    this.name = name // keyword to reference the object
+}
+const rui = new Person("Neto") // initialize constructor (objeto)
+const joao = new Person("Joao")
 
 
 // Object
