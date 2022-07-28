@@ -143,6 +143,18 @@ const sayMyName = () => {
 }
 sayMyName(); // call function
 
+// Callback function
+function sayMyName(name){
+    console.log('before execute callback function');
+    name() // calling the function here
+    console.log('after execute callback function');
+}
+sayMyName(
+    () => {
+        console.log('I am in a callback');
+    }
+)
+
 
 // Object
 var carro = {
