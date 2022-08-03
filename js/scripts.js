@@ -292,6 +292,7 @@ let names2 = ["neto", "jordan"];
 for(let char of name1){
     console.log(char);
 }
+
 // For ... in
 let person01 = {
     name: "rui",
