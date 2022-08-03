@@ -248,6 +248,30 @@ for(var numero = 0; numero <= 10; numero++){
     console.log(numero);
 }
 
+// Throw and Try Catch
+function sayMyName(name = ''){
+    if(name === ''){
+        throw new Error('Name is necessary');
+    }
+}
+//try
+try{
+    sayMyName();
+}catch(e){ //catch structure
+    console.log(e); //catch error
+}
+
+// Switch
+switch(expression){
+    case 'a':
+        //codigo
+        break
+    case 'b':
+        //codigo
+        break
+    default:
+        break
+}
 
 // While
 var i = 0;
@@ -256,12 +280,14 @@ while(i < 10){
     i++;
 }
 
-
 // Loops com Array
 var testing = ['Fusca', 'Ferrari', 'Gol'];
 for(var i = 0; i < testing.length; i++){
    // console.log(testing[i]);
 }
+
+
+
 
 
 // forEach
