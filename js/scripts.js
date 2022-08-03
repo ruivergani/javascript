@@ -232,7 +232,11 @@ carro.cor; // 'Branca'
 
 // New Object
 let name = new String("neto")
-
+const person = {
+    name: "rui", 
+    age: 22
+};
+delete person.age; // can delete this property
 
 // For loop
 for(var numero = 0; numero <= 10; numero++){
