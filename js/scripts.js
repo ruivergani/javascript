@@ -166,6 +166,48 @@ const rui = new Person("Neto") // initialize constructor (objeto)
 const joao = new Person("Joao")
 console.log(joao.walk()) // call function from constructor
 
+// Prototype
+// __proto__ = all data is encapsulated / "Rui".length
+// prototype_chain
+// prototype-based language
+
+// Type Conversion
+console.log('9' + 5) // concatena (ou seja) converte para string
+console.log(Number('9') + 5) // convert to number
+console.log(String(123)) // convert to string
+let number = 3.1457
+console.log(number.toFixed(2)); // to decimal places
+let love = "I love everyone";
+console.log(love.includes("love")); //check if the word love exists
+
+// Working with strings/arrays
+let phrase = "I want to live in love";
+let myArray = phrase.split(" "); // separate for spaces
+let phraseWithUnderscode = myArray.join("_") // juntar array com separador
+
+// Create array with constructor
+let myArray2 = new Array('a', 'b', 'c');
+console.log(myArray2)
+
+// Count elements in array = .length
+let word = "rui";
+Array.from(word); // transform into array
+
+let techs = ["html", "css", "javascript"]
+// add item in the end of array
+techs.push("node-js")
+// add item in the beginning of array
+techs.unshift("react-js")
+// remove from the end
+techs.pop();
+// remove from the beginning
+techs.shift();
+// get only a few itens from array
+techs.slice(1,3) // initial position and end position
+// remove 1 or more itens
+techs.splice(1, 1) // index and how many elements to take out
+// find position of element in array
+
 
 // Object
 var carro = {
