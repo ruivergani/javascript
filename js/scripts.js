@@ -229,6 +229,11 @@ carro.cor; // 'Branca'
 
 // Operators
 // Binary | Unary | Ternary = line operation
+// Condition ? value1 : value2
+bread = true;
+cheese = true;
+let niceBreakfast = bread && cheese ? "Cafe top" : "Cafe ruim"; // ternary operator
+
 
 // New Object
 let name = new String("neto")
