@@ -189,6 +189,14 @@ let phraseWithUnderscode = myArray.join("_") // juntar array com separador
 let myArray2 = new Array('a', 'b', 'c');
 console.log(myArray2)
 
+// Arrays
+var filhos = ['Rui', 'Maria', 'Pamela', 'Yuri']; // create array
+console.log(filhos); // print array
+
+filhos.pop(); // Remove last item of array
+filhos.push('Cruze'); // Add in the end of array
+filhos.length; // 4
+
 // Count elements in array = .length
 let word = "rui";
 Array.from(word); // transform into array
@@ -219,15 +227,11 @@ var carro = {
 carro.nome; // 'Lamborghini'
 carro.cor; // 'Branca'  
 
+// Operators
+// Binary | Unary | Ternary = line operation
 
-
-// Arrays
-var filhos = ['Rui', 'Maria', 'Pamela', 'Yuri']; // create array
-console.log(filhos); // print array
-
-filhos.pop(); // Remove last item of array
-filhos.push('Cruze'); // Add in the end of array
-filhos.length; // 4
+// New Object
+let name = new String("neto")
 
 
 // For loop
