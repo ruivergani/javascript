@@ -286,9 +286,20 @@ for(var i = 0; i < testing.length; i++){
    // console.log(testing[i]);
 }
 
-
-
-
+// For ... of 
+let name1 = "rui";
+let names2 = ["neto", "jordan"];
+for(let char of name1){
+    console.log(char);
+}
+// For ... in
+let person01 = {
+    name: "rui",
+    age: 22
+}
+for(let property in person01){
+    console.log(property);
+}
 
 // forEach
 testing.forEach( // just use item, index or array 
