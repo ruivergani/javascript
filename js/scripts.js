@@ -320,6 +320,14 @@ const titulo02 = document.querySelector('h2'); // atribui a uma constante a sele
 console.log(titulo02.classList[0])
 document.body; // retorna o body
 
+/*
+// getElementById = Element
+// getElementsByClassName = HTML Collection
+// getElementsByTagName = HTML Collection
+// querySelector = Element
+// querySelectorAll = NodeList (forEach)
+*/
+
 
 // Selecionando elements
 const cabecalho = document.getElementById('js-cabecalho'); // getElementByID
@@ -402,7 +410,7 @@ button.addEventListener('click', () => { // no clique a funcao vai ser executada
 })
 
 
-// OuterHTML, InnerHTML and innerText
+// OuterHTML, InnerHTML and innerText = all manipulating content
 const title = document.querySelector('.titulo');
 
 console.log(title.outerHTML); // todo html do elemento
