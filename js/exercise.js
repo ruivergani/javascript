@@ -53,4 +53,81 @@ function convertDegree(degree){ // comes like 50F
 }
 convertDegree("50F");
 
-//
+// Getting data from array
+const booksByCategory = [
+    // Object
+    {
+        category: "Riqueza", 
+        books: [
+            {
+                title: "Os segredos da mente milionaria",
+                author: "Jordan O"
+            },
+            {
+                title: "Testing a new title for the book",
+                author: "Rui Neto"
+            },
+            {
+                title: "Developing a new title",
+                author: "Mathew Branco"
+            }
+        ],
+    },
+    {
+        category: "Fome", 
+        books: [
+            {
+                title: "Os segredos",
+                author: "Luigi"
+            },
+            {
+                title: "Testing a new title for the book",
+                author: "Rui Neto"
+            },
+            {
+                title: "Developing a new title",
+                author: "Mathew Branco"
+            }
+        ],
+    },
+]
+const totalCategories = booksByCategory.length;
+
+for(let category of booksByCategory){ // get the category
+    console.log('Total de livros da categoria: ', category.category)
+    console.log(category.books.length) // total de livros da categoria
+
+}
+
+function countAuthors(){
+    let authors = [];
+    for (let category of booksByCategory){
+        for (book of category.books){
+            // Check if author already exists
+            if(authors.indexOf(book.author) == -1){ // indexOf returns -1 when author does not exists
+                authors.push(book.author); // put author in array
+            }
+            else{
+
+            }
+        }
+    }
+    console.log("Total de autores: ", authors.length);
+}
+
+countAuthors();
+
+function booksOfAuthor(author){
+    let books = [];
+    for (let category of booksByCategory){
+        for (book of category.books){
+            // Check if is augusto cury the author 
+            if(book.author === author){
+                books.push(book.title);
+            }
+        }
+    }
+    console.log("Livros do autor: ", authors.length);
+}
+
+booksOfAugustoCury();
