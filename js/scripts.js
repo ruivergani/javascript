@@ -394,7 +394,7 @@ const image = document.querySelector('img');
 console.log(image.getAttribute('src')); // pegar atributo src da imagem 
 
 // setAttribute
-//console.log(image.setAttribute('src', '/caminho-da-imagem')); // colocar um atributo na imagem
+console.log(image.setAttribute('src', '/caminho-da-imagem')); // colocar um atributo na imagem
 
 // Change password to view/not
 const button = document.querySelector('button')
@@ -419,6 +419,11 @@ console.log(title.innerText); // texto, sem tags
 
 title.innerText = '<h1>Novo Titulo </h1>'; // A tag  vai como texto
 title.innerHTML = '<h1>New title </h1>';
+// also use textContent
+
+// Manipulate input
+const element = document.querySelector('input');
+element.value = "valor que eu quiser"; // input the value or get it from
 
 
 // Events
@@ -497,7 +502,7 @@ parseInt();
 parseFloat();
 
 
-// Transversing in JS 
+// Transversing in JS (Navigate through elements)
 const titulo = document.querySelect('.titulo');
 titulo.parentElement; // pai deste elemento
 titulo.parentElement.parentElement; // pai do pai 
