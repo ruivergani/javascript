@@ -36,3 +36,34 @@ const students = [
     ['Rui', 22, 'SP']
 ]
 console.log(students[0][1])
+
+// Learning Stack
+// Step 1: create
+class Stack {
+    constructor(){
+        this.data = []
+        this.top = -1
+    }
+    push(value){
+        this.top++ // position 0
+        this.data[this.top] = value // get value in the position 0
+        return this.data
+    }
+    pop(){
+        if (this.top < 0) return undefined; // if is empty return undefined
+        const poppedTop = this.data[this.top] // get last value in the position
+        delete this.data[this.top]; //delete last element
+        this.top-- //decrement last element
+        return poppedTop; // return element deleted
+    }
+    peek(){
+        return this.top >= 0 ? this.data[this.top] : undefined
+    }
+}
+// Step 2: using the stack
+const stack = new Stack()
+
+// add data
+stack.push('learning')
+// remove data
+stack.pop()
