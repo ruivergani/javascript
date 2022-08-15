@@ -551,3 +551,34 @@ console.log(localStorage.getItem('Categoria'));
 //Session Storage
 sessionStorage.setItem('Categoria', 'Motos');
 // a informacao se perde com a fecha do navegador
+
+
+// Encapsulamento Concept
+class Poligono(){
+    constructor(altura, largura){
+        this.altura = altura
+        this.largura = largura
+    }
+    get area(){
+        return this.#calcularArea() 
+    }
+    #calcularArea(){ // # significa que o metodo nao e visivel fora da classe
+        return this.altura * this.largura
+    }
+}
+// create object
+let poligono = new Poligono(20, 30)
+
+
+// Inheritance
+class Veiculo{
+    rodas = 4;
+    mover(direcao){}
+    virar(direcao){}
+}
+class Moto extends Veiculo{ // heranca
+    constructor(){
+        super() // puxar atributos e metodos do pai
+        this.rodas = 2
+    }
+}
