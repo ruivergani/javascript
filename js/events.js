@@ -63,3 +63,6 @@ function changeColor(event){
 btn.forEach(item => {
     item.addEventListener('click', changeColor); // pegou item e adicionou evento nele
 })
+
+// Eventos
+// keyboard events

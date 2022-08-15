@@ -28,3 +28,11 @@ let primary = all.slice(3, 6); // start - end
 
 // sort()
 // reverse()
+// find()
+
+// Matrix concept
+const students = [
+    ['Joseph', 23, 'MG'],
+    ['Rui', 22, 'SP']
+]
+console.log(students[0][1])

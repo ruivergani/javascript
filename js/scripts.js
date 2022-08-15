@@ -452,7 +452,7 @@ function eventoDeClicar(){
 botao.addEventListener('click', eventoDeClicar); // calling the function here
 
 
-// Event
+// Events
 function eventoDeClicar1(event){ // event: retorna todos atributos e metodos do evento que aconteceu (click) no caso acima
     //Elemento que foi clicado
     console.log(event.currentTarget); // qual elemento esta clicando
@@ -526,6 +526,8 @@ const novoTitulo = document.createElement('h1');
 novoTitulo.innerText = 'Novo Titulo'; // inserir inner text
 novoTitulo.classList.add('titulo-novo'); // adiciona a class titulo novo
 areaDeTitulos.appendChild(novoTitulo); // coloca esse elemento na div area-titulos
+areaDeTitulos.prepend(div) // add before the element
+body.insertBefore(div, script); // Insert Before (element, where to insert)
 
 // setTimeout and setInterval
 
