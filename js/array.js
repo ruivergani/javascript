@@ -67,3 +67,21 @@ const stack = new Stack()
 stack.push('learning')
 // remove data
 stack.pop()
+
+
+// Queue
+class Queue{
+    constructor(){
+        this.data = []
+    }
+    enqueue(item){
+        this.data.push(item)
+        console.log(`${item} chegou na fila.`)
+    }
+    dequeue(){
+        const item = this.data.shift() // delete first data in the queue
+        console.log(`${item} saiu o primeiro da fila.`)
+    }
+}
+
+const fila = new Queue()
