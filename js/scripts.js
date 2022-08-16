@@ -554,18 +554,18 @@ sessionStorage.setItem('Categoria', 'Motos');
 
 
 // Encapsulamento Concept
-class Poligono(){
-    constructor(altura, largura){
-        this.altura = altura
-        this.largura = largura
-    }
-    get area(){
+//class Poligono(){
+    //constructor(altura, largura){
+    //    this.altura = altura
+    //    this.largura = largura
+    //}
+    //get area(){
         return this.#calcularArea() 
-    }
-    #calcularArea(){ // # significa que o metodo nao e visivel fora da classe
+    //}
+    //#calcularArea(){ // # significa que o metodo nao e visivel fora da classe
         return this.altura * this.largura
-    }
-}
+    //}
+//}
 // create object
 let poligono = new Poligono(20, 30)
 
@@ -582,3 +582,24 @@ class Moto extends Veiculo{ // heranca
         this.rodas = 2
     }
 }
+
+// Polymorphism
+class Atleta{
+    peso;
+    categoria;
+    constructor(peso){
+        this.peso = peso
+    }
+    definirCategoria(){
+        if(this.peso <= 50){
+            this.categoria = 'infantil'
+        }
+        else if(this.peso <= 65){
+            this.categoria = 'juvenil'
+        }
+        else{
+            this.categoria = 'adulto'
+        }
+    }
+}
+
