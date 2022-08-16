@@ -603,3 +603,23 @@ class Atleta{
     }
 }
 
+// Class Abstract - Nao pode ser instantiated
+class Parafuso{
+    constructor(){
+        if (this.constructor === Parafuso){
+            throw new Error('Parafuso can not be instantiated');
+        }
+    }
+    get tipo(){
+        throw new Error('Tipo precisa ser instantiated');
+    }
+}
+class Fenda extends Parafuso{ //herda de parafuso
+    constructor(){ 
+        super(); 
+    }
+    get tipo(){
+        return 'Fenda';
+    }
+}
+
