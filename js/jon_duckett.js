@@ -66,6 +66,6 @@ promessa
     .catch(error => { // for the reject
         console.log(error)
     })
-    .finally(() => {
+    .finally(() => { // happens after all the code is done
         console.log('finalizado...')
     })
