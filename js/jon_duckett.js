@@ -21,5 +21,19 @@ Object {
     - CaseSensitive
     - Array: usually a list that you dont know how many items you need
     - Synchronous: uma tarefa e concluida apos a outra
+    - Asynchronous: tarefas executadas de maneira independente
 */
 
+// Callback functions
+function imprimirDado(dado){
+    console.log(dado)
+}
+
+imprimirDado(function () {
+    return 'Ola Mundo'
+})
+
+// setTimeout (function, delay)
+setTimeout(() => {
+    console.log('Depois de 1 segundo.')
+}, 1000);
