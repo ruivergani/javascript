@@ -37,3 +37,10 @@ imprimirDado(function () {
 setTimeout(() => {
     console.log('Depois de 1 segundo.')
 }, 1000);
+
+const https = require('https');
+const API = 'https://ruiverganineto.co.uk' // fetch
+https.get(API, response => {
+    console.log(response.statusCode) // if received status code should be 200
+})
+console.log('Conectando API')
