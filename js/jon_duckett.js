@@ -44,3 +44,28 @@ https.get(API, response => {
     console.log(response.statusCode) // if received status code should be 200
 })
 console.log('Conectando API')
+
+// Promise: object javascrit com a promessa que algo sera realizado, usado para operacoes assincronas
+// Pending | Fullfield | Rejected | Settled = estagios da promessa
+
+let aceitar = true
+console.log('pedir uber')
+const promessa = new Promise((resolve, reject) => { // saber se vai ser resolvida ou rejeitada
+    if(aceitar){
+        return resolve('pedido aceito')
+    }
+    else{
+        return reject('pedido negado')
+    }
+})
+console.log('aguardando...')
+promessa
+    .then(result => { // for the resolve
+        console.log(result)
+    })
+    .catch(error => { // for the reject
+        console.log(error)
+    })
+    .finally(() => {
+        console.log('finalizado...')
+    })
