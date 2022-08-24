@@ -90,3 +90,43 @@ axios
      console.log(response.data)
    })
    .catch(error => console.log(error)) //erros
+
+
+import axios from "axios";
+Promise.all([ // using promise.all
+    axios.get('https://api.github.com/users/ruivergani')
+])
+.then(responses => {
+    console.log(responses[0].data.login)
+})
+
+// Using Async - Await concept
+const promessa1 = new Promise((resolve, reject) => { // saber se vai ser resolvida ou rejeitada
+    return resolve('ok')
+  })
+  
+  async function start(){ // same code as the function below
+    try{
+      const result = await promessa // espera pela promessa
+      console.log(result)
+    }
+    catch (e){ //error
+      console.log(e)
+    }
+    finally{
+      console.log('rodar sempre')
+    }
+  }
+  
+  start()
+  
+  // promessa
+  //     .then(result => { // for the resolve
+  //         console.log(result)
+  //     })
+  //     .catch(error => { // for the reject
+  //         console.log(error)
+  //     })
+  //     .finally(() => { // happens after all the code is done
+  //         console.log('finalizado...')
+  //     })
