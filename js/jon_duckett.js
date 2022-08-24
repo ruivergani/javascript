@@ -75,3 +75,18 @@ fetch("https://api.github.com/users/ruivergani")
 .then((response) =>
   console.log(response)
 );
+
+// Using Axios
+import axios from "axios";
+axios.get('/users')
+  .then(res => {
+    console.log(res.data);
+});
+
+import axios from "axios";
+axios
+   .get('https://api.github.com/users/ruivergani') //promise pending
+   .then(response => { // response
+     console.log(response.data)
+   })
+   .catch(error => console.log(error)) //erros
