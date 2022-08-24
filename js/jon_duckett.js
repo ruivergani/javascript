@@ -69,3 +69,9 @@ promessa
     .finally(() => { // happens after all the code is done
         console.log('finalizado...')
     })
+
+// Using Github API
+fetch("https://api.github.com/users/ruivergani")
+.then((response) =>
+  console.log(response)
+);
