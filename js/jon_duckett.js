@@ -22,6 +22,8 @@ Object {
     - Array: usually a list that you dont know how many items you need
     - Synchronous: uma tarefa e concluida apos a outra
     - Asynchronous: tarefas executadas de maneira independente
+    - Array Constructor: Array()
+    
 */
 
 // Callback functions
@@ -104,7 +106,6 @@ Promise.all([ // using promise.all
 const promessa1 = new Promise((resolve, reject) => { // saber se vai ser resolvida ou rejeitada
     return resolve('ok')
   })
-  
   async function start(){ // same code as the function below
     try{
       const result = await promessa // espera pela promessa
@@ -117,9 +118,7 @@ const promessa1 = new Promise((resolve, reject) => { // saber se vai ser resolvi
       console.log('rodar sempre')
     }
   }
-  
   start()
-  
   // promessa
   //     .then(result => { // for the resolve
   //         console.log(result)
@@ -130,3 +129,17 @@ const promessa1 = new Promise((resolve, reject) => { // saber se vai ser resolvi
   //     .finally(() => { // happens after all the code is done
   //         console.log('finalizado...')
   //     })
+
+  // Using Async - Await with Fetch
+  async function start(){ // same code as the function below
+    const response = await fetch('https://api.github.com/users/ruivergani')
+    const user = await response.json()
+  
+    const reposResponse = await fetch(user.repos_url)
+    const repos = await reposResponse.json()
+    console.log(repos)
+  
+  }
+
+// Working with APIs
+
