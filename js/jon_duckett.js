@@ -23,7 +23,15 @@ Object {
     - Synchronous: uma tarefa e concluida apos a outra
     - Asynchronous: tarefas executadas de maneira independente
     - Array Constructor: Array()
-    
+2. Chapter:
+  - Basic concepts such as variables, operators script
+3. Chapter:
+  - Functions | Objects | Methods
+  - Argument (variables) vs Parameters (values)
+  - Functions without name are called anonymous
+  - Variable Scope (local and global variables), global variables consume more memory than local variables
+  - Creating Objects using Constructors
+  - This keyword is used 
 */
 
 // Callback functions
@@ -141,5 +149,6 @@ const promessa1 = new Promise((resolve, reject) => { // saber se vai ser resolvi
   
   }
 
-// Working with APIs
+
+
 
