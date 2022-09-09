@@ -44,7 +44,11 @@ button.addEventListener('click', callBack); // clique
 button.addEventListener('mouseenter', callBack); // enter the section 
 button.addEventListener('mouseleave', callBack); // leave the section
 button.addEventListener('keydown', callBack); // apertar tecla do teclado
-// window.resize 
+// window.resize
+
+el.addEventListener('blur', function() {
+    checkUsername(); // function
+})
 
 
 const buttons = document.querySelector('a'); // variable
@@ -64,5 +68,44 @@ btn.forEach(item => {
     item.addEventListener('click', changeColor); // pegou item e adicionou evento nele
 })
 
-// Eventos
-// keyboard events
+/* Events 
+1. Select the elemtent node you want the script to respond to
+2. Indicate which event on the selected node will trigger the response
+3. Start the code you want to run when the event occurs
+
+HTML Event Handler Attributes : recommended not to use them
+Trandional DOM event handlers: element.onevent = functionName()
+Using EventListener (Actual ones)
+*/
+
+function checkUsername(e){
+    var target = e.target; // get target of event
+}
+
+// Using EventListener with the Event Object
+function checkLength(e, minLength){
+    var el, elMsg;
+    if(!e){ // If event object does not exists
+        e = window.event;
+    }
+    el = e.target || e.srcElement; // get target of event 
+    elMsg = el.nextSibling; // get its next sibling
+
+    if(el.value.length < minLength){ // If lenght is too short set message
+        elMsg.innerHTML = 'Username must be at least ' + minLength + ' characters or more ';
+    } else{
+        elMsg.innerHTML = '';
+    }
+}
+
+var elUsername = document.getElementById('username');
+if(elUsername.addEventListener){ // If event listener is supported
+    elUsername.addEventListener('blur', function(e){ // On blur event
+        checkLength(e,5);
+    }, false);
+}
+else {
+    elUsername.attachEvent('onblur', function(e){ // IE fallback onblur
+        checkLength(e, 5); // Call checkLength function
+    });
+}
