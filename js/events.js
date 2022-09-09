@@ -109,3 +109,6 @@ else {
         checkLength(e, 5); // Call checkLength function
     });
 }
+
+
+// Event Delegation = basically you need to reduce the amount of eventListeners to increase performance and maintainability (instead of using for each item of list you can use for the whole list itself)
